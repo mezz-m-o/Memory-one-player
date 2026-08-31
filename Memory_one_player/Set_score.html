@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set score</title>
+    <style>
+        body{
+            background-color: #202020;
+            color: #ffffff;
+        }
+        #setScore{
+            display: none;
+        }
+        #a1{
+            color: blue;
+        }
+    </style>
+    <script src="Set_score.js" defer></script>
+</head>
+<body>
+    <div id="pass">
+        <h1>enter password to set score or <a id="a1" href="index.html">go back</a></h1>
+        <input id="password" type="password"><button id="submitButton">submit</button>
+        <p id="label"></p>
+    </div>
+    <div id="setScore">
+        <h1>set score</h1>
+        <input id="score" type="number">
+        <button id="saveButton">save</button>
+    </div>
+</body>
+</html>

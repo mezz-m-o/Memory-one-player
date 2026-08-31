@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'oliv2';
+  src: url('oliv2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.grid-container {
+  /* Step 1: Change the layout mode to grid */
+  display: grid;
+
+  /* Step 2: Define 3 columns of equal width using fractional units (fr) */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Step 3: Define row heights (optional, rows will auto-size by default) */
+  grid-template-rows: auto;
+  /* Step 4: Add a 20px gap spacing between your grid cells */
+  gap: 1px;
+}
+
+/* Optional styling to visualize the items */
+.grid-item {
+  background-color: #6600ff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+@media (min-width: 980px) {.cards{width: 200px;}}
+
+@media (max-width: 980px) and (min-width: 780px){.cards{width: 150px;}}
+
+@media (max-width: 780px) and (min-width: 580px){.cards{width: 100px;}}
+
+@media (max-width: 580px) {.cards{width: 50px;}}
+#p1{color: #0000ff;}
+#start_button{
+  background-color: #0000ff;
+  font-size: 50px;
+}
+#timer{
+  font-family: oliv2;
+}
+*{
+  margin: 0px;
+  padding: 2px;
+}
