@@ -7,7 +7,7 @@ const score=document.getElementById("score");
 const saveButton=document.getElementById("saveButton");
 const resetButton=document.getElementById("resetButton");
 submitButton.addEventListener("click", function(){
-    if(password.value=="voli Boll"){
+    if(password.value=="voliboll"){
         pass.style.display = "none";
         SetScore.style.display = "Block";
         saveButton.addEventListener("click", function(){
