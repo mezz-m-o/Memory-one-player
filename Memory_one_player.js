@@ -144,13 +144,13 @@ function on_card_click(card_number){
         if(existing_cards.length<=0){
         const display = document.getElementById('timer');
         
-        if(localStorage.getItem("low_score")==null){localStorage.setItem("low_score", seconds);display.style.color = "#808080";}else if(localStorage.getItem("low_score")>current_score){localStorage.setItem("low_score", seconds);display.style.color = "#00ff00";}else if(localStorage.getItem("low_score")<current_score){display.style.color = "#ff0000"}else{display.style.color = "#ffff00"};
-        
+        if(localStorage.getItem("low_score")==null){localStorage.setItem("low_score", seconds);display.style.color = "#808080";}else if(localStorage.getItem("low_score")>seconds){localStorage.setItem("low_score", seconds);display.style.color = "#00ff00";}else if(localStorage.getItem("low_score")<seconds){display.style.color = "#ff0000"}else{display.style.color = "#ffff00"};
+        current_score=seconds;
         display.style.fontSize = `${screen.availHeight}px`;
         display.requestFullscreen()
         setInterval(function(){
           const display = document.getElementById('timer');
-          display.textContent=localStorage.getItem("low_score");
+          display.textContent=current_score;
           if(display.style.opacity == "1"){display.style.opacity = "0";}else{display.style.opacity = "1";};
         }, 500);
       };}, 500)
@@ -167,7 +167,6 @@ function startTimer() {
     seconds++;
     
     display.textContent = seconds;
-    current_score=seconds; 
     if(existing_cards.length<=0) {
       setTimeout(function(){
         clearInterval(timer);
