@@ -150,7 +150,7 @@ function on_card_click(card_number){
         display.requestFullscreen()
         setInterval(function(){
           const display = document.getElementById('timer');
-          display.textContent=seconds;
+          display.textContent=localStorage.getItem("low_score");
           if(display.style.opacity == "1"){display.style.opacity = "0";}else{display.style.opacity = "1";};
         }, 500);
       };}, 500)
