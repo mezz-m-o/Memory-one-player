@@ -18,6 +18,8 @@ function enterPass(){
     if(password.value=="voliboll"){
         pass.style.display = "none";
         SetScore.style.display = "Block";
+        label.textContent = "";
+        localStorage.removeItem("passwordAttempts")
         saveButton.addEventListener("click", function(){
             localStorage.setItem("low_score", score.value);
             window.location.href = "index.html";
